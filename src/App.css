@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+button {
+  cursor: pointer;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  background: rgba(255, 255, 255, 0.171);
+  backdrop-filter: blur(10px);
+  z-index: 48;
+}
+
+.scroll::-webkit-scrollbar {
+  overflow: hidden;
+ }
+
+.star {
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  width: 20px;
+  height: 20px;
+}
+
+.scroll-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: hw-tex 3s alternate ease-in-out;
+  
+}
+@keyframes hw-tex {
+  0%{
+      transform: translateX(-1000px);
+  }
+}
+
+.scroll-right {
+  position: absolute;
+  right: 0;
+  animation: hw-img 3s alternate ease-in-out;
+}
+@keyframes hw-img {
+  0%{
+      transform: translateX(1000px);
+  }
+}
+
+.history span {
+ font-weight: 400;
+}
+
+
+.video-background-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 70%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  background-size: cover;
+  filter: brightness(0.7); 
+}
+
+.content-overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.265);
+}
+
+
+
+
